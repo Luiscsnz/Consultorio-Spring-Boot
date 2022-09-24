@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container-fluid text-center">
+        <nav class="navbar navbar navbar-dark bg-dark navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">MisionTIC</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="menu.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="usuarios.html">Usuarios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pacientes.html">Pacientes</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Productos
+                    </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="tiposproducto.html">Tipos productos</a></li>
+                                <li><a class="dropdown-item" href="tipospresentacion.html">Tipos Presentacion</a></li>
+                                <li><a class="dropdown-item" href="unidadesmedida.html">Unidades de Medida</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Cerrar Sesion</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    </header>
+    <div class="container text-center">
+        <h1>Usuarios</h1>
+    </div>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-dark">
+                    <!--NO OLVIDAR CAMBIAR EL ID DE LA TABLA PARA CADA MODULO-->
+                    <tbody id="tablausuarios" class="table-group-divider">
+                        <tr>
+                            <th class="row-center" scope="row">Id</th>
+                            <td class="row-center">Nombre</td>
+                            <td class="row-center">Correo</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-12" style="text-align:left;">
+                <button type="button" class="btn btn-primary" onclick="window.location='./menu.html'">Atras</button>
+                <button type="button" class="btn btn-success" onclick="window.location='usuariosdetalle.html'">Agregar</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="js/request.js"></script>
+    <script src="js/usuarios.js"></script>
+    <script>
+        window.onload = function() {
+            listarUsuarios();
+        }
+    </script>
+</body>
+
+</html>
